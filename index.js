@@ -52,9 +52,16 @@ const wrongAnswers =['scissors','bag','pencil_case'];
 
 // LOADER FUNCTIONALITY
 
-window.addEventListener('load',function(){
-    loader.style.display='none';
-})
+
+function loadPage(){
+  setTimeout(showContent, 1000);
+}
+
+function showContent() {
+  loader.style.display = "none";
+}
+
+loadPage();
 
 //////////////////////////////////////////////////////////////////////////////////
 
@@ -105,6 +112,7 @@ function putAnswer1(e){
       audio1.play();
       t.style.visibility='hidden';
         right1.style.visibility = "visible"; 
+        ans1.classList.add("filled");
         ans1.removeEventListener('click', putAnswer1); 
       }
    else if (wrongAnswers.includes(t.innerHTML)){
@@ -153,6 +161,7 @@ function putAnswer2(e){
       audio1.play();
       t.style.visibility='hidden';
         right2.style.visibility = "visible"; 
+        ans2.classList.add("filled");
         ans2.removeEventListener('click', putAnswer2); 
       }
    else if (wrongAnswers.includes(ans1.innerHTML)){
@@ -192,6 +201,7 @@ function putAnswer3(e){
       audio1.play();
       t.style.visibility='hidden';
         right3.style.visibility = "visible"; 
+        ans3.classList.add("filled");
         ans3.removeEventListener('click', putAnswer3); 
       }
    else if (wrongAnswers.includes(ans1.innerHTML)){
@@ -233,6 +243,7 @@ function putAnswer4(e){
       audio1.play();
       t.style.visibility='hidden';
         right4.style.visibility = "visible"; 
+        ans4.classList.add("filled");
         ans4.removeEventListener('click', putAnswer4); 
       }
    else if (wrongAnswers.includes(ans1.innerHTML)){
@@ -276,6 +287,7 @@ function putAnswer5(e){
       audio1.play();
       t.style.visibility='hidden';
         right5.style.visibility = "visible"; 
+        ans5.classList.add("filled");
         ans5.removeEventListener('click', putAnswer5); 
       }
    else if (wrongAnswers.includes(ans1.innerHTML)){
@@ -303,6 +315,14 @@ function putAnswer5(e){
 }
 
 
+function turnOffWatch (){
+  if ( ans1.classList.contains("filled") && ans2.classList.contains("filled")  && ans3.classList.contains("filled") &&
+  ans4.classList.contains("filled") && ans5.classList.contains("filled") ){
+    watch.classList.add('opacity');
+   }
+};
+
+turnOffWatch ();
 
 //////////////////////////////////////////////////////////////////////////////////
 
