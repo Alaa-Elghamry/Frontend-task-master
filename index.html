@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+ 
+    <!-- Custom CSS -->
+<link rel="stylesheet" href="main.css" type="text/css" />
+
+<title>Front-End Task</title>
+
+</head>
+
+<body>
+    <div id="loader"></div>
+<div id="container" >
+   <div id="wrapper">
+
+       <!-- HEADER START -->
+       <div class="row">
+           <div class="header">
+            <div class="headingtitle">
+                <h1> What's in the basket? Choose and write.</h1>
+             </div>
+             
+         
+             <div class="resourceBtn show-modal">
+                 <img src="img/resourse_icon.png" class="resourceImg" />
+             </div>
+
+             <div class="helpBtn show-modal">
+                 <img src="img/help_icon.png" class="resourceImg">
+               </div>
+
+           </div>
+       </div>
+     <!-- HEADER END -->
+       <audio id="audio1" src="img/correct.mp3" preload="auto"></audio>
+        <audio id="audio2" src="img/incorrect.mp3" preload="auto"></audio>
+     <!-- MAIN CONTENT START -->
+       <div class="row">
+           <div class="main">
+            <div class="background">
+                <div class="mainContent">
+                   <div class="itemContainer">
+
+                       <div class="questionContainer">
+                           <span class="question wrongAns " id="question_1" data-Answer="incorrect">scissors</span>
+                           <span class="question rightAns" id="question_2" data-Answer="correct">eraser</span>
+                           <span class="question rightAns" id="question_3" data-Answer="correct" >ruler</span>
+                           <span class="question wrongAns" id="question_4" data-Answer="incorrect" >bag</span> <br>
+                           <span class="question wrongAns" id="question_5" data-Answer="incorrect" >pencil case</span>
+                           <span class="question rightAns" id="question_6" data-Answer="correct" >pencil</span>
+                           <span class="question rightAns" id="question_7" data-Answer="correct" >book</span>
+                           <span class="question rightAns" id="question_8" data-Answer="correct" >pen</span> 
+                       </div>
+
+                       <div class="optionContainer ">
+                         <div class="BG"> <img src="img/background.png"></div>
+                     
+                      
+                        <div id="ans1" class="showAns"> 
+                          <span class="option option_1 " > &nbsp;</span>
+                          <span id="right1"> <img src="img/tikMark-small.png"></span>
+                          <span id="wrong1"> <img src="img/red-wrong.png"></span>
+
+                        </div>
+
+                        <div id="ans2" class="showAns"> 
+                          <span class="option option_2 " > &nbsp;</span>
+                          <span id="right2"> <img src="img/tikMark-small.png"></span>
+                          <span id="wrong2"> <img src="img/red-wrong.png"></span>
+
+                        </div>
+
+
+                        <div id="ans3" class="showAns"> 
+                          <span class="option option_3 " > &nbsp;</span>
+                          <span id="right3"> <img src="img/tikMark-small.png"></span>
+                          <span id="wrong3"> <img src="img/red-wrong.png"></span>
+
+                        </div>
+
+
+                        <div id="ans4" class="showAns"> 
+                          <span class="option option_4 " > &nbsp;</span>
+                          <span id="right4"> <img src="img/tikMark-small.png"></span>
+                          <span id="wrong4"> <img src="img/red-wrong.png"></span>
+
+                        </div>
+
+
+                        <div id="ans5" class="showAns"> 
+                          <span class="option option_5 " > &nbsp;</span>
+                          <span id="right5"> <img src="img/tikMark-small.png"></span>
+                          <span id="wrong5"> <img src="img/red-wrong.png"></span>
+
+                        </div>
+
+
+                        </div>                    
+                      </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+       <!-- MAIN CONTENT END -->
+
+       <!-- FOOTER START -->
+       <div class="row">
+           <div class="footer">
+            <div class="replay">
+                <img src="img/replay_icon.png" class="resourceImg" />
+             </div>
+             
+             <div class="watch">
+                <img src="img/showAns_icon.png" class="resourceImg" />
+             </div>       
+        </div>
+       </div>
+       <!-- FOOTER END -->
+
+       <!-- POP UP WINDOW START -->
+     
+       <div class="resoursePopup modal hidden"  >
+        <div class="resourseContainer mainContent">
+          <img class="closeBtn close-modal" src="img/close_icon.png">
+          <div class="firstRow" style="overflow: auto;width:100%;height:100%;padding:0;">
+            <img src="img/dummy.jpg" />
+          </div>
+        </div>
+      </div>
+
+      <div class="helpPopup modal hidden" >
+        <div class="helpContainer mainContent">
+          <img class="closeBtn close-modal" src="img/close_icon.png">
+          <div class="firstRow" style="overflow: auto;width:100%;height:100%;font-size:30px;">
+            <p>Help content goes here.</p>
+          </div>
+        </div>
+      </div>
+  
+   
+     <!-- POP UP WINDOW END -->
+   </div>
+</div>
+
+     <!-- JavaScript -->
+ 
+    <script src="index.js"></script>
+</body>
+</html>
