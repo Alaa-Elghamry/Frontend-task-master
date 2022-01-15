@@ -30,6 +30,7 @@ const ans3 = document.querySelector('.option_3');
 const ans4 = document.querySelector('.option_4');
 const ans5 = document.querySelector('.option_5');
 
+const right = document.querySelectorAll('.right');
 const right1 = document.getElementById('right1');
 const right2 = document.getElementById('right2');
 const right3 = document.getElementById('right3');
@@ -114,6 +115,7 @@ function putAnswer1(e){
         right1.style.visibility = "visible"; 
         ans1.classList.add("filled");
         ans1.removeEventListener('click', putAnswer1); 
+       
       }
    else if (wrongAnswers.includes(t.innerHTML)){
    
@@ -142,8 +144,8 @@ function putAnswer1(e){
     } 
     
     });
-  
 
+    turnOffWatch ();
 }
 // SECOND PLACE HOLDER
 
@@ -183,6 +185,9 @@ function putAnswer2(e){
                }    
               } 
 });
+    
+
+     turnOffWatch ();
 }
 
 //// THIRD PLACE HOLDER
@@ -225,6 +230,8 @@ wrong3.style.visibility = "hidden"
   t.style.color = "" ;
 } } 
 });
+  
+turnOffWatch ();
 }
 
 ////// FOURTH PLACE HOLDER
@@ -245,7 +252,7 @@ function putAnswer4(e){
         right4.style.visibility = "visible"; 
         ans4.classList.add("filled");
         ans4.removeEventListener('click', putAnswer4); 
-      }
+    }
    else if (wrongAnswers.includes(ans1.innerHTML)){
     wrong4.style.visibility = "visible";
     audio2.play();
@@ -268,6 +275,9 @@ function putAnswer4(e){
      t.style.color = "" ;
    }} 
   });
+
+    
+  turnOffWatch ();
 }
 
 
@@ -312,6 +322,8 @@ function putAnswer5(e){
      t.style.color = "" ;
    } } 
   });
+  
+  turnOffWatch ();
 }
 
 
@@ -319,6 +331,7 @@ function turnOffWatch (){
   if ( ans1.classList.contains("filled") && ans2.classList.contains("filled")  && ans3.classList.contains("filled") &&
   ans4.classList.contains("filled") && ans5.classList.contains("filled") ){
     watch.classList.add('opacity');
+    watch.removeEventListener( ); 
    }
 };
 
@@ -371,18 +384,16 @@ btnCloseModal.addEventListener('click', closeModal);
   ans5.addEventListener('click', putAnswer5);
 
  /// Adding Right Mark
- right1.style.visibility = "visible";
- right2.style.visibility = "visible";
- right3.style.visibility = "visible";
- right4.style.visibility = "visible";
- right5.style.visibility = "visible";
 
+ for (let k = 0; k < right.length; k++){
+  right[k].style.visibility='visible';}
 
+  //// Adding opacity to wrong answers
     for (let k = 0; k < wrongAns.length; k++){
     wrongAns[k].classList.add('opacity');}
 
   
-
+  ////// Removing Right Ans
     for (let k = 0; k < rightAns.length; k++){
       rightAns[k].style.visibility='hidden';}
     
@@ -418,13 +429,11 @@ restart.addEventListener('click',()=>  {
     ans5.addEventListener('click', putAnswer5);
 
     /// Removing Right Mark
-    right1.style.visibility = "hidden";
-    right2.style.visibility = "hidden";
-    right3.style.visibility = "hidden";
-    right4.style.visibility = "hidden";
-    right5.style.visibility = "hidden";
+   
+    for (let k = 0; k < right.length; k++){
+      right[k].style.visibility='hidden';}
 
-     // WRONG ANSWERS
+     // Remove WRONG ANSWERS
     for (let k = 0; k < wrongAns.length; k++){
       wrongAns[k].classList.remove('opacity');}
   
@@ -456,10 +465,7 @@ function resize(){
         windowHeight / contentHeight 
     );
 
-    container.style.transform = max ? "" :  "scale(" + scale + ")";
-//     container.style.width = max?'':windowWidth * scale;
-//     container.style.height = max?'':windowHeight * scale;
-// 
+    container.style.transform = max ? "" :  "scale(" + scale + ")"; 
 }
 
 resize();
