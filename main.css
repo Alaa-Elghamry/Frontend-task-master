@@ -32,22 +32,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-#container {
-  /* margin: 0 auto; */
-  /* position: absolute;
-  margin: 0;
-  padding: 0;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  display: block; */
-}
-#wrapper {
-  /* margin: 20px;
-  position: absolute;
-  height: auto; */
-}
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -300,56 +285,6 @@ img {
   font-size: 35pt;
   visibility: hidden;
 }
-
-/* #wrong1 {
-  position: absolute;
-  text-align: center;
-  right: 0.104166667in;
-  top: 30px;
-  cursor: pointer;
-  visibility: hidden;
-  animation: blinker 1s linear infinite;
-}
-
-#wrong2 {
-  position: absolute;
-  text-align: center;
-  right: 0.104166667in;
-  top: 30px;
-  cursor: pointer;
-  visibility: hidden;
-  animation: blinker 1s linear infinite;
-}
-
-#wrong3 {
-  position: absolute;
-  text-align: center;
-  right: 0.104166667in;
-  top: 30px;
-  cursor: pointer;
-  visibility: hidden;
-  animation: blinker 1s linear infinite;
-}
-
-#wrong4 {
-  position: absolute;
-  text-align: center;
-  right: 0.104166667in;
-  top: 30px;
-  cursor: pointer;
-  visibility: hidden;
-  animation: blinker 1s linear infinite;
-}
-
-#wrong5 {
-  position: absolute;
-  text-align: center;
-  right: 0.104166667in;
-  top: 30px;
-  cursor: pointer;
-  visibility: hidden;
-  animation: blinker 1s linear infinite;
-} */
 
 /* FOOTER STYLE */
 
